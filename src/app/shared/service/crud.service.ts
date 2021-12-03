@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Todo } from '../interface/todo.interface';
 
-const BASE_URL = 'http://localhost:3000/todo';
+// const BASE_URL = 'http://localhost:3000/todo';
+const BASE_URL = 'https://my-json-server.typicode.com/faizanalibugti/JSON-Server/todo';
 
 @Injectable({
   providedIn: 'root'
