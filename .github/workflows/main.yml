@@ -42,4 +42,4 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm install -g surge
-      - run: surge ./deploy_dist/os-cdn os-cdn.surge.sh --token 27e27cde12cfbc965c7b22d88adf2ac4
+      - run: surge ./deploy_dist/os-cdn ng-todo.surge.sh --token 27e27cde12cfbc965c7b22d88adf2ac4
