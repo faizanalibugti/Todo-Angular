@@ -1,0 +1,19 @@
+<header>
+  <h1>Faizan's Todo List</h1>
+</header>
+
+<form action="" #form="ngForm" (submit)="saveCourse.emit(selectedTodo)">
+  <input
+
+    required
+    type="text"
+    name="title"
+    placeholder="Enter todo"
+    [(ngModel)]="selectedTodo.title"
+    class="todo-input"
+  />
+
+  <button [disabled]="form.invalid" type="submit" class="todo-button">
+    <span class="fas fa-plus-square"></span>
+  </button>
+</form>

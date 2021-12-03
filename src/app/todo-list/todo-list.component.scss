@@ -1,0 +1,132 @@
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: #00c9ff;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: #00c9ff;
+}
+
+.warning {
+    color: red;
+    background: rgb(233, 150, 150);
+    margin: 0 500px;
+    visibility: hidden;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.edit-btn,
+.trash-btn,
+.complete-btn {
+  color: white;
+  background: #ff6f47;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.trash-btn:hover {
+  color: #ff6f47;
+  background: white;
+}
+
+.edit-btn {
+  background: blue;
+}
+
+.edit-btn:active {
+    background: royalblue;
+}
+
+.edit-btn:hover {
+  background: white;
+  color: blue;
+}
+
+.complete-btn {
+  background: rgb(73, 204, 73);
+}
+
+.complete-btn:hover {
+  color: rgb(73, 204, 73);
+  background: white;
+}
+
+.todo-item {
+  padding: 0em 0.5em;
+}
+
+.icon {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+/* Edit Task */
+li > label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+}
+
+li > input[type="text"] {
+  width: 226px;
+}
+
+li input[type="text"] {
+  display: none;
+}
+
+li.editMode input[type="text"] {
+  display: block;
+}
+
+li.editMode label {
+  display: none;
+}

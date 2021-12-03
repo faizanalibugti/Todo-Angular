@@ -1,0 +1,19 @@
+<div class="todo-container">
+  <ul class="todo-list">
+    <div class="todo" *ngFor="let todo of todos"
+    >
+      <li class="todo-item">
+          <label>{{ todo.title }}</label>
+      </li>
+      <button class="edit-btn" (click)="selected.emit(todo); $event.stopImmediatePropagation()">
+          <span class="icon fas fa-pencil-alt"></span>
+      </button>
+      <button class="complete-btn">
+          <span class="icon fas fa-check"></span>
+      </button>
+      <button class="trash-btn" (click)="deleted.emit(todo.id); $event.stopImmediatePropagation()">
+          <span class="icon fas fa-trash"></span>
+      </button>
+    </div>
+  </ul>
+</div>
