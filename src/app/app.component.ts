@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
   resetTodo() {
     const emptyCourse = {
       id: null,
-      title: ""
+      title: "",
+      completed: false
     }
     this.selectedTodo = emptyCourse
   }
@@ -32,21 +33,25 @@ export class AppComponent implements OnInit {
   }
 
   loadTodo() {
-    this.resetTodo()
+    // this.resetTodo()
     this.todo = this.crud.all()
       .subscribe(todo => this.todo = todo);
   }
 
-  deleteTodo(courseId) {
-    this.crud.delete(courseId).subscribe(result => this.loadTodo())
+  deleteTodo(id) {
+    this.crud.delete(id).subscribe(result => this.loadTodo());
   }
 
-  saveTodo(course) {
-    if (course.id){
-      this.crud.update(course).subscribe(result => this.loadTodo())
+  saveTodo(todo) {
+    if (todo.id){
+      this.crud.update(todo).subscribe(result => this.loadTodo())
     } else {
-      this.crud.create(course).subscribe(result => this.loadTodo())
+      this.crud.create(todo).subscribe(result => this.loadTodo())
     }
     this.resetTodo()
+  }
+
+  updateTodo(todo) {
+    this.crud.update(todo).subscribe(result => this.loadTodo())
   }
 }
